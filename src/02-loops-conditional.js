@@ -10,7 +10,13 @@
  */
 
 function isEven(number) {
-
+    const isItEven = number % 2 === 0;
+    const isItOdd = number % 2 === 1 || -1;
+        if (isItEven) {
+            return true
+        } else if (isItOdd) {
+            return false
+        }
 }
 
 /**
@@ -27,7 +33,11 @@ function isEven(number) {
  */
 
 function isWithinRange(n, min, max) {
-
+if(n >= min && n <= max) {
+    return true
+} else {
+    return false
+}
 }
 
 /**
@@ -43,9 +53,12 @@ function isWithinRange(n, min, max) {
  */
 
 function stringContainsBa(string) {
-
+if(string.includes("ba")) {
+    return true
+} else {
+    return false
 }
-
+}
 
 /**
  * This function calculates the sum of each digit raised to its position.
@@ -58,8 +71,18 @@ function stringContainsBa(string) {
  * const result = sumOfDigitsWithPosition(52); // result will be 5^1 + 2^2 = 5 + (2 * 2) = 5 + 4 = 9
  */
 function sumOfDigitsWithPosition(num) {
+let stringNum = num.toString().split("")
+    for (let stringDigit of stringNum) {
+        let raisedNum = Number(stringDigit)^Number(stringDigit)
+        let raisedNumPlus = raisedNum + raisedNum
 
 }
+}
+
+//Loop i loop?
+
+
+
 
 
 

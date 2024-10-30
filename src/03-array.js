@@ -14,9 +14,9 @@
  * console.log(numbers); // [5]
  */
 function returnNumbers(start, finish) {
-
+    let numArr = Array.from({length: finish - start + 1}, (_, a) => a + start)
+    return numArr
 }
-
 
 /**
  * This function sums up all the values in an array.
@@ -30,7 +30,11 @@ function returnNumbers(start, finish) {
  */
 
 function sumArray(array) {
-
+let sum = 0;
+    for (let value of array) {
+    sum += value
+}
+    return sum
 }
 
 /**
@@ -45,8 +49,11 @@ function sumArray(array) {
  * const updatedArray = pushElement(myArray, 4); // updatedArray will be [1, 2, 3, 4]
  */
 function pushElement(arr, elem) {
-
-}
+    arr.push(elem)
+    }
+let myArray = [1, 2, 3];
+pushElement(myArray, 4);
+console.log(myArray); // Output: [1, 2, 3, 4]
 
 
 /**
@@ -61,5 +68,21 @@ function pushElement(arr, elem) {
  * const filtered = removeValue(numbers, 2); // filtered will be [1, 3, 4, 5]
  */
 function removeValue(array, valueToRemove) {
-
+    return array.filter(element => element !== valueToRemove);
 }
+
+const numbers = [1, 2, 3, 2, 4, 2, 5];
+const filtered = removeValue(numbers, 2); // filtered will be [1, 3, 4, 5]
+console.log(filtered)
+
+
+
+
+
+
+
+
+
+
+
+

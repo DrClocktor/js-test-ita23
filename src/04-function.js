@@ -9,7 +9,7 @@
  * const message = generateMessage("Jack", 25); // "Hey Jack, happy 25 birthday!"
  */
 function generateMessage(name, age) {
-
+return `Hey ${name}, happy ${age} birthday!`
 }
 
 /**
@@ -22,7 +22,7 @@ function generateMessage(name, age) {
  * const title = titleCase("hello world"); // title will be "Hello World"
  */
 function titleCase(sentence) {
-
+    return sentence.replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 /**
